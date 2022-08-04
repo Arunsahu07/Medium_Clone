@@ -7,7 +7,7 @@ import { MediumContext } from '../context/MediumContext';
 import PostCard from '../components/PostCard'
 export default function Home() {
   const {setCurrUser} = useContext(MediumContext);  
-  if(window !== undefined &&  window.localStorage.getItem("user"))
+  if(typeof( window) == undefined &&  window.localStorage.getItem("user"))
   {
     setCurrUser( JSON.parse(window.localStorage.getItem("user")))
     let userr =  window.localStorage.getItem("user")

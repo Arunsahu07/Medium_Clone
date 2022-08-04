@@ -13,7 +13,7 @@ const PostCard = () => {
 
   return (
     <>
-    { typeof(window)  !== undefined ? 
+    { typeof(window)  != undefined ? 
     <div className="md:w-3/5  ">
       {console.log("len",
        posts.length )}
@@ -33,7 +33,7 @@ const PostCard = () => {
                 <div className="w-full ">
                   <div className="flex items-center  mt-3 ">
                     <img
-                      className="rounded-full w-16 h-16"
+                      className="rounded-full w-16 h-16 object-contain"
                       src={post.data.authorImage}
                       alt="profil"
                     />
@@ -73,7 +73,7 @@ const PostCard = () => {
                   </div>
                 </div>
                 <div className=" text-center  h-full w-full flex justify-center  items-center  ">
-                  <img className="w-1/2 px-4 " src={post.data.bannerImage} alt="" />
+                  <img className="w-1/2 px-4  cover " src={post.data.bannerImage} alt="" />
                 </div>
               </div>
             </Link>

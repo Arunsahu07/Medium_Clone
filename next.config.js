@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
+  // presets : ["next/babel"]
 }
 
 module.exports = nextConfig
+// "presets": ["next/babel"]
