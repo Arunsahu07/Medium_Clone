@@ -5,5 +5,8 @@ const nextConfig = {
   // presets : ["next/babel"]
 }
 
-module.exports = nextConfig
-// "presets": ["next/babel"]
+// module.exports = nextConfig
+// // "presets": ["next/babel"]
+module.exports = {
+  distDir: 'build',
+}
