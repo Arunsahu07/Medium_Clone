@@ -3,7 +3,7 @@ import Image from "next/image";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { FiMinusCircle } from "react-icons/fi";
 import bookmark from "../images/bookmark.png";
-import profile from "../images/jslogo.png";
+import profile from "../images/jsLogo.png";
 import Link from "next/link";
 import { useContext } from "react";
 import { MediumContext } from "../context/MediumContext";
