@@ -8,11 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "dependencies": {
-    "@next/swc-win32-ia32-msvc": "^12.2.2",
+    
     "autoprefixer": "^10.4.7",
     "dotenv": "^16.0.1",
     "firebase": "^9.9.0",
