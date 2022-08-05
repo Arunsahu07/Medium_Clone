@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 // import {logo} from "../images/logo.png";
-import logo from "C:/Arun/medium-app/medium-app/images/header.png";
+import logo from "../images/header.png";
 import { useContext } from "react";
 import { MediumContext } from "../context/MediumContext";
 import WritePost from "./WritePost";
