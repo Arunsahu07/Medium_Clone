@@ -4,18 +4,21 @@ import {getAuth } from "firebase/auth";
 import {GoogleAuthProvider } from "firebase/auth";
 import {getFirestore } from "firebase/firestore";
 // import dotenv from "dotenv"
+ {REACT_APP_API_KEY,  REACT_APP_PROJECT_ID,REACT_APP_STORAGE_BUCKET, 
+  REACT_APP_AUTH_DOMAIN,REACT_APP_MESSAGING_SENDER_ID, REACT_APP_APP_ID} = process.env
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDbqo0X-CRgf9yb8Zekg8vYd0EUTeLUFko",
-  authDomain: "my-medium-7f7aa.firebaseapp.com",
-  projectId: "my-medium-7f7aa",
-  storageBucket: "my-medium-7f7aa.appspot.com",
-  messagingSenderId: "900833332845",
-  appId: "1:900833332845:web:2dd4016689e734d6f13964"
+  apiKey: REACT_APP_API_KEY,
+  authDomain: REACT_APP_AUTH_DOMAIN,
+  projectId: REACT_APP_PROJECT_ID,
+  storageBucket: REACT_APP_STORAGE_BUCKET,,
+  messagingSenderId: REACT_APP_MESSAGING_SENDER_ID,
+  appId:  REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
