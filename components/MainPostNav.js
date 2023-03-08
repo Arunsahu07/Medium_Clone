@@ -30,11 +30,6 @@ const MainPostNav = () => {
           <HiOutlineHome  className="cursor-pointer" />
           </div>
         </Link>
-          {/* Arun kuamr */}
-          <FiBell className="cursor-pointer" />
-          <BiBookmark className="cursor-pointer"/>
-          <RiArticleLine  className="cursor-pointer"/>
-          <BsPencilSquare className="cursor-pointer"/>
       </div>
       <div className="object-cover rounded-full">
         <img  className="rounded-full cursor-pointer w-9 h-9  " src={currUser?.user?.photoURL} alt=""  />
@@ -44,3 +39,4 @@ const MainPostNav = () => {
 };
 
 export default MainPostNav;
+
