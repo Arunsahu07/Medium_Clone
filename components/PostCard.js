@@ -9,28 +9,24 @@ import { useContext } from "react";
 import { MediumContext } from "../context/MediumContext";
 const PostCard = () => {
   const { users, posts, setSelectedPost } = useContext(MediumContext);
-  // console.log("users,posts =",users,posts);
-
+ 
   return (
     <>
     { typeof(window)  != undefined ? 
-    <div className="md:w-3/5  ">
-      {console.log("len",
-       posts.length )}
+    <div>
       {posts.map((post, _) => {
         return (
           <div
             key={post.id}
-            className="cursor-pointer w-full flex flex-col items-start justify-start  "
+            className="cursor-pointer w-full flex flex-col justify-center items-center"
             id={post.id}
             onClick={() => {
               setSelectedPost(post);
             }}
             >
-     
             <Link href={`/post/${post.id}`}>
-              <div className="  md:flex justify-between items-center ml-32 mt-4 border-b pb-8 w-full bg-gray-100 px-4">
-                <div className="w-full ">
+              <div className="  md:flex justify-between items-center  mt-4 border-b pb-8 w-full bg-gray-100 px-5 max-w-[1500px]">
+                <div className="w-full">
                   <div className="flex items-center  mt-3 ">
                     <img
                       className="rounded-full w-16 h-16 object-contain"
@@ -48,28 +44,17 @@ const PostCard = () => {
                     {post.data.body.slice(0, 140) + "..."}
                   </div>
 
-                  <div className=" flex justify-between text-[#5b5b5b] text-xl font-normal">
+                  <div className=" flex justify-between text-[#5b5b5b] text-xl font-normal ">
                     <div className="flex items-center justify-between w-full">
                       <div className=" mt-3">
                         <span className="rounded-full bg-gray-200 px-2 py-1 ">
                           {post.data.category}
                         </span>
-                        <span> 3 jul 2k22 · </span>
-                        {/* {console.log("ostsdfon",post.data.postedOn,post.data.postLength)} */}
+                        <span> {new Date(post.data.postedOn?.seconds * 1000).toLocaleDateString()} · </span>
                         <span>{post.data.postLenght} read</span>
                       </div>
-                      <div className="flex justify-center">
-                        <Image priority= {false}
-                          src={bookmark}
-                          className=" inline-block"
-                          alt="bk"
-                          width={17}
-                          height={20}
-                        />
-                        <FiMinusCircle className="mx-4" />
-                        <HiDotsHorizontal />
-                      </div>
                     </div>
+                    <button className="whitespace-nowrap text-white bg-[#288FFF] px-2 rounded-md">Read More</button>
                   </div>
                 </div>
                 <div className=" text-center  h-full w-full flex justify-center  items-center  ">
@@ -88,3 +73,4 @@ const PostCard = () => {
 };
 export default PostCard;
 // export {ref}
+
